@@ -1,6 +1,7 @@
 package model;
 
 public class ProfesorHoras extends Profesor {
+    private int id;
     private String titulo;
     private int horas;
     
@@ -20,10 +21,17 @@ public class ProfesorHoras extends Profesor {
         this.titulo = titulo;
     }
 
-    public ProfesorHoras(String nombre, String cedula, String titulo, int horas){
+    public ProfesorHoras(int id, String nombre, String cedula, String titulo, int horas){
         super(nombre, cedula);
         this.titulo = titulo;
         this.horas = horas;
+        this.id = id;
     }
     
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getId(){
+        return id;
+    }
 }
