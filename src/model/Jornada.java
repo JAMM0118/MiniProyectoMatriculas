@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public class Jornada{
-    private int id;
+    private int id; 
     private TipoJornada tipoJornada;
     private ArrayList<Materia> materias;
 
