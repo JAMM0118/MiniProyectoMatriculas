@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public class Modelo {
-    private ArrayList<Materia> materias;
+    private ArrayList<TipoMateria> materias;
     private ArrayList<Jornada> jornadas;
     private ArrayList<Profesor> profesores;
     private ArrayList<Alumno> alumnos;
@@ -15,11 +15,15 @@ public class Modelo {
         this.alumnos = new ArrayList<>();
     }
 
-    public ArrayList<Materia> getMaterias() {
+    public void cargarDatos() {
+        
+    }
+
+    public ArrayList<TipoMateria> getMaterias() {
         return materias;
     }
 
-    public void setMaterias(ArrayList<Materia> materias) {
+    public void setMaterias(ArrayList<TipoMateria> materias) {
         this.materias = materias;
     }
 

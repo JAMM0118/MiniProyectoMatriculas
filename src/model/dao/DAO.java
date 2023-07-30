@@ -8,5 +8,5 @@ public interface DAO<T> {
     public void modificar(T t);
     public void eliminar(T t);
     public List<T> obtenerTodos(); 
-    public T obtener(String nombre);
+    public T getById(int id);
 }

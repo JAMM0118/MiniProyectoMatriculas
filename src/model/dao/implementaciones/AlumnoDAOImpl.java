@@ -32,10 +32,12 @@ public class AlumnoDAOImpl implements AlumnoDAO {
     }
 
     @Override
-    public Alumno obtener(String nombre) {
+    public Alumno getById(int id) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'obtener'");
+        throw new UnsupportedOperationException("Unimplemented method 'getById'");
     }
+
+
 
     
 }

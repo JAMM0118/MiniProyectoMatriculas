@@ -8,7 +8,7 @@ public class Alumno{
     private String nombre;
     private String cedula;
     private int edad;
-    private ArrayList<Materia> materiasMatriculadas;
+    private ArrayList<TipoMateria> materiasMatriculadas;
     private Jornada jornadaAsignada;
 
     public Alumno(int id, String nombre, String cedula, int edad,Jornada jornadaAsignada){
@@ -16,7 +16,7 @@ public class Alumno{
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
-        this.materiasMatriculadas = new ArrayList<Materia>();
+        this.materiasMatriculadas = new ArrayList<TipoMateria>();
         this.jornadaAsignada = jornadaAsignada;
     }
 
@@ -25,7 +25,7 @@ public class Alumno{
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
-        this.materiasMatriculadas = new ArrayList<Materia>();
+        this.materiasMatriculadas = new ArrayList<TipoMateria>();
         this.jornadaAsignada = jornadaAsignada;
         
     }
@@ -48,14 +48,14 @@ public class Alumno{
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    public ArrayList<Materia> getMateriasMatriculadas() {
+    public ArrayList<TipoMateria> getMateriasMatriculadas() {
         return materiasMatriculadas;
     }
-    public void setMateriasMatriculadas(ArrayList<Materia> materiasMatriculadas) {
+    public void setMateriasMatriculadas(ArrayList<TipoMateria> materiasMatriculadas) {
         this.materiasMatriculadas = materiasMatriculadas;
     }
 
-    public void addMateriaMatricula(Materia materia){
+    public void addMateriaMatricula(TipoMateria materia){
         this.materiasMatriculadas.add(materia);
     }
 

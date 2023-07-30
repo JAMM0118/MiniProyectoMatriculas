@@ -2,39 +2,41 @@ package model.dao.implementaciones;
 
 import java.util.List;
 
-import model.Materia;
-import model.dao.MateriaDAO;
+import model.Matricula;
+import model.dao.MatriculaDAO;
 
-public class MatriculaDAOImpl implements MateriaDAO {
+public class MatriculaDAOImpl implements MatriculaDAO {
 
     @Override
-    public void insertar(Materia t) {
+    public void insertar(Matricula t) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'insertar'");
     }
 
     @Override
-    public void modificar(Materia t) {
+    public void modificar(Matricula t) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'modificar'");
     }
 
     @Override
-    public void eliminar(Materia t) {
+    public void eliminar(Matricula t) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'eliminar'");
     }
 
     @Override
-    public List<Materia> obtenerTodos() {
+    public List<Matricula> obtenerTodos() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'obtenerTodos'");
     }
 
     @Override
-    public Materia obtener(String nombre) {
+    public Matricula getById(int id) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'obtener'");
+        throw new UnsupportedOperationException("Unimplemented method 'getById'");
     }
-    
+
+
+
 }

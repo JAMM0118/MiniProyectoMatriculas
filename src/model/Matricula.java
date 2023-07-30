@@ -3,9 +3,9 @@ package model;
 public class Matricula {
     private int id;
     private Alumno alumno;
-    private Materia materia;
+    private TipoMateria materia;
 
-    public Matricula(int id, Alumno alumno, Materia materia) {
+    public Matricula(int id, Alumno alumno, TipoMateria materia) {
         this.id = id;
         this.alumno = alumno;
         this.materia = materia;
@@ -27,11 +27,11 @@ public class Matricula {
         this.alumno = alumno;
     }
 
-    public Materia getMateria() {
+    public TipoMateria getMateria() {
         return materia;
     }
 
-    public void setMateria(Materia materia) {
+    public void setMateria(TipoMateria materia) {
         this.materia = materia;
     }
 

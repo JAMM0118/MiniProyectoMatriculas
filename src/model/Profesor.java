@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public abstract class Profesor {
     private String nombre;
     private String cedula;
-    private ArrayList<Materia> materias;
+    private ArrayList<TipoMateria> materias;
 
     public Profesor() {
         this.materias = new ArrayList<>();
@@ -33,15 +33,15 @@ public abstract class Profesor {
         this.cedula = cedula;
     }
 
-    public ArrayList<Materia> getMaterias() {
+    public ArrayList<TipoMateria> getMaterias() {
         return materias;
     }
 
-    public void setMaterias(ArrayList<Materia> materias) {
+    public void setMaterias(ArrayList<TipoMateria> materias) {
         this.materias = materias;
     }
 
-    public void addMateria(Materia materia){
+    public void addMateria(TipoMateria materia){
         this.materias.add(materia);
     }
 
