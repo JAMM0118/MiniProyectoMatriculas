@@ -18,6 +18,11 @@ public class ProfesorDePlanta extends Profesor {
         this.id = id;
     }
 
+    public ProfesorDePlanta(String nombre, String cedula, Categoria categoria) {
+        super(nombre, cedula);
+        this.categoria = categoria;
+    }
+
     public void setId(int id) {
         this.id = id;
     }

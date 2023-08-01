@@ -11,6 +11,11 @@ public class Matricula {
         this.materia = materia;
     }
 
+    public Matricula(Alumno alumno, Materia materia){
+        this.materia = materia;
+        this.alumno = alumno;
+    }
+
     public int getId() {
         return id;
     }

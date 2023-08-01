@@ -1,9 +1,7 @@
 package model;
 
 import java.util.ArrayList;
-
 public class Alumno{
-    private static int idContador = 1;
     private int id;
     private String nombre;
     private String cedula;
@@ -11,7 +9,16 @@ public class Alumno{
     private ArrayList<Materia> materiasMatriculadas;
     private Jornada jornadaAsignada;
 
-    public Alumno(int id, String nombre, String cedula, int edad,Jornada jornadaAsignada){
+    public Alumno(int id, String nombre, String cedula, int edad,Jornada jornadaAsignada, ArrayList<Materia> materiasMatriculadas){
+        this.id = id;
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.edad = edad;
+        this.materiasMatriculadas = new ArrayList<Materia>();
+        this.jornadaAsignada = jornadaAsignada;
+    }
+
+    public Alumno(int id, String nombre, String cedula, int edad, Jornada jornadaAsignada){
         this.id = id;
         this.nombre = nombre;
         this.cedula = cedula;
@@ -21,14 +28,14 @@ public class Alumno{
     }
 
     public Alumno(String nombre, String cedula, int edad, Jornada jornadaAsignada){
-        this.id = idContador++;
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
         this.materiasMatriculadas = new ArrayList<Materia>();
         this.jornadaAsignada = jornadaAsignada;
-        
     }
+
+    
 
     public String getNombre() {
         return nombre;
@@ -69,5 +76,10 @@ public class Alumno{
     public void setId(int id){
         this.id = id;
     }
+
+    public int getId() {
+        return id;
+    }
+    
     
 }
