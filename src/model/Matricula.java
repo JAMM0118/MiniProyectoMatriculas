@@ -3,12 +3,17 @@ package model;
 public class Matricula {
     private int id;
     private Alumno alumno;
-    private TipoMateria materia;
+    private Materia materia;
 
-    public Matricula(int id, Alumno alumno, TipoMateria materia) {
+    public Matricula(int id, Alumno alumno, Materia materia) {
         this.id = id;
         this.alumno = alumno;
         this.materia = materia;
+    }
+
+    public Matricula(Alumno alumno, Materia materia){
+        this.materia = materia;
+        this.alumno = alumno;
     }
 
     public int getId() {
@@ -27,11 +32,11 @@ public class Matricula {
         this.alumno = alumno;
     }
 
-    public TipoMateria getMateria() {
+    public Materia getMateria() {
         return materia;
     }
 
-    public void setMateria(TipoMateria materia) {
+    public void setMateria(Materia materia) {
         this.materia = materia;
     }
 

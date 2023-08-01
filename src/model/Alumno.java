@@ -3,7 +3,6 @@ package model;
 import java.util.ArrayList;
 
 public class Alumno{
-    private static int idContador = 1;
     private int id;
     private String nombre;
     private String cedula;
@@ -21,13 +20,11 @@ public class Alumno{
     }
 
     public Alumno(String nombre, String cedula, int edad, Jornada jornadaAsignada){
-        this.id = idContador++;
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
         this.materiasMatriculadas = new ArrayList<TipoMateria>();
         this.jornadaAsignada = jornadaAsignada;
-        
     }
 
     public String getNombre() {
@@ -69,5 +66,10 @@ public class Alumno{
     public void setId(int id){
         this.id = id;
     }
+
+    public int getId() {
+        return id;
+    }
+    
     
 }
