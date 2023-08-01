@@ -1,21 +1,29 @@
 package model;
 
 import java.util.ArrayList;
-
 public class Alumno{
     private int id;
     private String nombre;
     private String cedula;
     private int edad;
-    private ArrayList<TipoMateria> materiasMatriculadas;
+    private ArrayList<Materia> materiasMatriculadas;
     private Jornada jornadaAsignada;
 
-    public Alumno(int id, String nombre, String cedula, int edad,Jornada jornadaAsignada){
+    public Alumno(int id, String nombre, String cedula, int edad,Jornada jornadaAsignada, ArrayList<Materia> materiasMatriculadas){
         this.id = id;
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
-        this.materiasMatriculadas = new ArrayList<TipoMateria>();
+        this.materiasMatriculadas = new ArrayList<Materia>();
+        this.jornadaAsignada = jornadaAsignada;
+    }
+
+    public Alumno(int id, String nombre, String cedula, int edad, Jornada jornadaAsignada){
+        this.id = id;
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.edad = edad;
+        this.materiasMatriculadas = new ArrayList<Materia>();
         this.jornadaAsignada = jornadaAsignada;
     }
 
@@ -23,9 +31,11 @@ public class Alumno{
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
-        this.materiasMatriculadas = new ArrayList<TipoMateria>();
+        this.materiasMatriculadas = new ArrayList<Materia>();
         this.jornadaAsignada = jornadaAsignada;
     }
+
+    
 
     public String getNombre() {
         return nombre;
@@ -45,14 +55,14 @@ public class Alumno{
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    public ArrayList<TipoMateria> getMateriasMatriculadas() {
+    public ArrayList<Materia> getMateriasMatriculadas() {
         return materiasMatriculadas;
     }
-    public void setMateriasMatriculadas(ArrayList<TipoMateria> materiasMatriculadas) {
+    public void setMateriasMatriculadas(ArrayList<Materia> materiasMatriculadas) {
         this.materiasMatriculadas = materiasMatriculadas;
     }
 
-    public void addMateriaMatricula(TipoMateria materia){
+    public void addMateriaMatricula(Materia materia){
         this.materiasMatriculadas.add(materia);
     }
 

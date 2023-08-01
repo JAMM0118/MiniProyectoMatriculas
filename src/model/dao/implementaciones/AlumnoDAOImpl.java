@@ -11,6 +11,7 @@ import java.util.List;
 import model.Alumno;
 import model.Jornada;
 import model.Materia;
+import model.Matricula;
 import model.dao.AlumnoDAO;
 
 public class AlumnoDAOImpl implements AlumnoDAO {
@@ -76,6 +77,8 @@ public class AlumnoDAOImpl implements AlumnoDAO {
             int edad = rs.getInt(4);
             int jornadaID = rs.getInt(5);
             Jornada jornada = new JornadaDAOImpl(conn).getById(rs.getInt(5));
+
+
             Alumno alumno = new Alumno(id, nombre, cedula, edad, jornada);
             return alumno;
         } catch (SQLException ex) {

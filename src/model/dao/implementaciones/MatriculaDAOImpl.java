@@ -61,27 +61,28 @@ public class MatriculaDAOImpl implements MatriculaDAO {
             }
             
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println(e.getMessage());
         }
         return matriculas;
         
     }
 
     public Matricula convertir(ResultSet rs){
-        Matricula matricula = null;
         try {
-            int id = rs.getInt("idmatricula");
-            int idAlumno = rs.getInt("alumnoid");
+            int id = rs.getInt(1);
+
+            int idAlumno = rs.getInt(2);
             Alumno alumno = new AlumnoDAOImpl(conn).getById(idAlumno);
-            int idMateria = rs.getInt("materiaid");
+            int idMateria = rs.getInt(3);
             Materia materia = new MateriaDAOimpl(conn).getById(idMateria);
 
-            matricula = new Matricula(id, alumno, materia);
-            
+            Matricula matricula = new Matricula(id, alumno, materia);
+
+            return matricula;
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return matricula;
+        return null;
     }
 
     @Override
