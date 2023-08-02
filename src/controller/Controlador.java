@@ -156,7 +156,10 @@ public class Controlador implements ActionListener {
             menuMatricular.textFieldCedula.setText("");
             menuMatricular.textFieldApellido.setText("");
             menuMatricular.textFieldEdad.setText("");
-            //menuMatricular.jCheckBoxFísica;   
+            menuMatricular.jCheckBoxFísica.setSelected(false);
+            menuMatricular.jCheckBoxMatematicas.setSelected(false);
+            menuMatricular.jCheckBoxEspanol.setSelected(false);
+            menuMatricular.jCheckBoxSociales.setSelected(false);   
         }
 
     }
