@@ -14,7 +14,7 @@ import model.dao.ProfesorCatedraDAO;
 public class ProfesorCatedraDAOImpl implements ProfesorCatedraDAO {
 
     private final String GETALL = "SELECT * from profesorhoracatedra;";
-    private final String GETONE = "SELECT * FROM profesorhoracatedra WHERE idprofesorhoracatedra = ?;;";
+    private final String GETONE = "SELECT * FROM profesorhoracatedra WHERE idprofesorhoracatedra = ?;";
     private Connection conn;
 
     public ProfesorCatedraDAOImpl(Connection conn) {

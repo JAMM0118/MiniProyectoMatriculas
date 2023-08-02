@@ -1,5 +1,4 @@
-package view.Intefaz;
-/*/*
+package view.Intefaz;/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -13,10 +12,9 @@ public class VentanaProfesorPlanta extends javax.swing.JFrame {
     /**
      * Creates new form VentanaProfesorPlanta
      */
-    VentanaPrincipal principal;
-    public VentanaProfesorPlanta(VentanaPrincipal principal) {
+    public VentanaProfesorPlanta() {
         initComponents();
-        this.principal = principal;
+        
     }
 
     /**
@@ -61,36 +59,34 @@ public class VentanaProfesorPlanta extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 636, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnVolverPrincipal)
-                        .addGap(150, 150, 150))))
+                .addGap(275, 275, 275)
+                .addComponent(btnVolverPrincipal)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(btnVolverPrincipal)
-                .addGap(0, 19, Short.MAX_VALUE))
+                .addGap(35, 35, 35))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVolverPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverPrincipalActionPerformed
-       dispose();
-       principal.setVisible(true);
+
+      
     }//GEN-LAST:event_btnVolverPrincipalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnVolverPrincipal;
+    public javax.swing.JButton btnVolverPrincipal;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tableProfesorPlanta;
+    public javax.swing.JTable tableProfesorPlanta;
     // End of variables declaration//GEN-END:variables
 }

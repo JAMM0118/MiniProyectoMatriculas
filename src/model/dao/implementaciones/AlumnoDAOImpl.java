@@ -119,8 +119,8 @@ public class AlumnoDAOImpl implements AlumnoDAO {
             // dao.insertar(alumno);
 
 
-            Alumno alumno = dao.getById(1);
-            System.out.println(alumno.getNombre());
+            Alumno alumno = dao.getById(2);
+            System.out.println(alumno.getJornadaAsignada().getTipoJornada());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
