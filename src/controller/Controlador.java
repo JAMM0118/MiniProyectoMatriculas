@@ -11,11 +11,14 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
 
 import model.Alumno;
 import model.Jornada;
+import model.Materia;
 import model.Modelo;
 import model.ProfesorDePlanta;
 import model.ProfesorHoras;
@@ -50,16 +53,49 @@ public class Controlador implements ActionListener {
         menuMatricular.btnVolver.addActionListener(this);
         menuMatriculados.btnVolver.addActionListener(this);
         menuMatricular.btnGuardarDatos.addActionListener(this);
+        menuMatriculados.btnVerMateriasMatriculadas.addActionListener(this);
     }
 
     public void cerrarVentanas(JFrame ventana) {
         ventana.dispose();
         principal.setVisible(true);
     }
+    public void verMateriasMatriculadas(){
+        int idAlumno = menuMatriculados.tableMatriculados.getSelectedRow();
+        if(idAlumno == -1){
+            JOptionPane.showMessageDialog(menuMatriculados,"Seleccione un alumno por favor");
+        }else{
+            Alumno alumno = modelo.obtenerAlumno(idAlumno+1);
+            DefaultTableModel tableModel = new DefaultTableModel();
+            tableModel.addColumn("ID");
+            tableModel.addColumn("NOMBRE_DE_MATERIA");
+            tableModel.addColumn("PROFESORES_PLANTA");
+            tableModel.addColumn("PROFESORES_HORAS");
+            tableModel.addColumn("JORNADA");
+            
+            ArrayList <Materia> materias = alumno.getMateriasMatriculadas();
+            
+            for(Materia materia : materias){
+                if(materia.getProfesorDePlanta() != null){
+                    Object[] fila = { materia.getId(), materia.getNombre(), materia.getProfesorDePlanta().getNombre(),"NO HAY",
+                    materia.getJornada().getTipoJornada() };
+                    tableModel.addRow(fila);
+                }if(materia.getProfesorCatedra() != null){
+                    Object[] fila = { materia.getId(), materia.getNombre(), "NO HAY",materia.getProfesorCatedra().getNombre(),
+                    materia.getJornada().getTipoJornada() };
+                    tableModel.addRow(fila);
+                }
+                
+            }
+            JTable tableMaterias = new JTable(tableModel);
+            JScrollPane panelMaterias = new JScrollPane(tableMaterias);
+            JOptionPane.showMessageDialog(menuMatriculados,panelMaterias);
+        }
+    }       
 
     public void matricularMaterias(){
         String nombre, cedula;
-        int edad,id;
+        int edad;
         Jornada jornada;
         nombre = menuMatricular.textFieldName.getText() +" "+ menuMatricular.textFieldApellido.getText();
         cedula = menuMatricular.textFieldCedula.getText();
@@ -89,11 +125,11 @@ public class Controlador implements ActionListener {
                 modelo.matricularMateria(alumno, modelo.obtenerMateriaPorID(5));
             }
             if (menuMatricular.jCheckBoxSociales.isSelected()) {
-                modelo.matricularMateria(alumno, modelo.obtenerMateriaPorID(4));
+                modelo.matricularMateria(alumno, modelo.obtenerMateriaPorID(7));
             }
         }else{
              if(menuMatricular.jCheckBoxFisica.isSelected()){
-                modelo.matricularMateria(alumno, modelo.obtenerMateriaPorID(3));
+                modelo.matricularMateria(alumno, modelo.obtenerMateriaPorID(8));
             }
             if(menuMatricular.jCheckBoxEspanol.isSelected()){
                 modelo.matricularMateria(alumno, modelo.obtenerMateriaPorID(6));
@@ -203,6 +239,10 @@ public class Controlador implements ActionListener {
             menuMatricular.jCheckBoxMatematicas.setSelected(false);
             menuMatricular.jCheckBoxEspanol.setSelected(false);
             menuMatricular.jCheckBoxSociales.setSelected(false);
+        }
+        
+        if(e.getSource()== menuMatriculados.btnVerMateriasMatriculadas){
+            verMateriasMatriculadas();
         }
 
     }

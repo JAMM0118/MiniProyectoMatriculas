@@ -133,7 +133,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
  
     }//GEN-LAST:event_btnMatricularMateriasActionPerformed
 
-    public void btnMatriculadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMatriculadosActionPerformed
+    private void btnMatriculadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMatriculadosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMatriculadosActionPerformed
 
