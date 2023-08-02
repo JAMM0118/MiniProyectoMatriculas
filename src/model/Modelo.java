@@ -52,6 +52,11 @@ public class Modelo {
         return (ArrayList<Materia>) materiaDAO.obtenerTodos();
     }
 
+    public Materia obtenerMateriaPorID(int id) {
+        return materiaDAO.getById(id);
+    }
+
+
     public void matricularMateria(Alumno alumno, Materia materia) {
         matriculaDAO.insertar(new Matricula(alumno, materia));
     }

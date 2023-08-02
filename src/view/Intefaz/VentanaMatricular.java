@@ -44,7 +44,7 @@ public class VentanaMatricular extends javax.swing.JFrame {
         labelMatricularMaterias = new javax.swing.JLabel();
         jCheckBoxSociales = new javax.swing.JCheckBox();
         jCheckBoxMatematicas = new javax.swing.JCheckBox();
-        jCheckBoxFísica = new javax.swing.JCheckBox();
+        jCheckBoxFisica = new javax.swing.JCheckBox();
         jCheckBoxEspanol = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -95,7 +95,7 @@ public class VentanaMatricular extends javax.swing.JFrame {
 
         jCheckBoxMatematicas.setText("Matematicas");
 
-        jCheckBoxFísica.setText("Física");
+        jCheckBoxFisica.setText("Física");
 
         jCheckBoxEspanol.setText("Español");
 
@@ -132,7 +132,7 @@ public class VentanaMatricular extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jCheckBoxSociales))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCheckBoxFísica)
+                                .addComponent(jCheckBoxFisica)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jCheckBoxMatematicas)))
                         .addGap(0, 122, Short.MAX_VALUE))))
@@ -180,7 +180,7 @@ public class VentanaMatricular extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBoxFísica)
+                            .addComponent(jCheckBoxFisica)
                             .addComponent(jCheckBoxMatematicas))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -214,7 +214,7 @@ public class VentanaMatricular extends javax.swing.JFrame {
     public javax.swing.JButton btnVolver;
     public javax.swing.JComboBox<String> comboBoxJornada;
     public javax.swing.JCheckBox jCheckBoxEspanol;
-    public javax.swing.JCheckBox jCheckBoxFísica;
+    public javax.swing.JCheckBox jCheckBoxFisica;
     public javax.swing.JCheckBox jCheckBoxMatematicas;
     public javax.swing.JCheckBox jCheckBoxSociales;
     private javax.swing.JLabel jLabel5;
