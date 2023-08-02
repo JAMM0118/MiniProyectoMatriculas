@@ -1,5 +1,4 @@
-package view.Intefaz;
-/*
+package view.Intefaz;/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -13,10 +12,11 @@ public class VentanaMatricular extends javax.swing.JFrame {
     /**
      * Creates new form VentanaMatricular
      */
-    VentanaPrincipal principal;
-    public VentanaMatricular(VentanaPrincipal principal) {
+
+   
+    public VentanaMatricular() {
         initComponents();
-        this.principal = principal;
+
     }
 
     /**
@@ -71,7 +71,7 @@ public class VentanaMatricular extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel5.setText("Matricular Materias");
 
-        comboBoxJornada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manana", "Tarde" }));
+        comboBoxJornada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manaña", "Tarde" }));
 
         labelEdad.setText("Ingrese su edad");
 
@@ -95,9 +95,9 @@ public class VentanaMatricular extends javax.swing.JFrame {
 
         jCheckBoxMatematicas.setText("Matematicas");
 
-        jCheckBoxFísica.setText("Fisica");
+        jCheckBoxFísica.setText("Física");
 
-        jCheckBoxEspanol.setText("Espanol");
+        jCheckBoxEspanol.setText("Español");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -135,7 +135,7 @@ public class VentanaMatricular extends javax.swing.JFrame {
                                 .addComponent(jCheckBoxFísica)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jCheckBoxMatematicas)))
-                        .addGap(0, 71, Short.MAX_VALUE))))
+                        .addGap(0, 122, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(206, 206, 206)
                 .addComponent(jLabel5)
@@ -197,8 +197,7 @@ public class VentanaMatricular extends javax.swing.JFrame {
     }//GEN-LAST:event_textFieldNameActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-       dispose();
-       principal.setVisible(true);
+
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void btnGuardarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarDatosActionPerformed
@@ -211,13 +210,13 @@ public class VentanaMatricular extends javax.swing.JFrame {
 
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnGuardarDatos;
-    private javax.swing.JButton btnVolver;
-    private javax.swing.JComboBox<String> comboBoxJornada;
-    private javax.swing.JCheckBox jCheckBoxEspanol;
-    private javax.swing.JCheckBox jCheckBoxFísica;
-    private javax.swing.JCheckBox jCheckBoxMatematicas;
-    private javax.swing.JCheckBox jCheckBoxSociales;
+    public javax.swing.JButton btnGuardarDatos;
+    public javax.swing.JButton btnVolver;
+    public javax.swing.JComboBox<String> comboBoxJornada;
+    public javax.swing.JCheckBox jCheckBoxEspanol;
+    public javax.swing.JCheckBox jCheckBoxFísica;
+    public javax.swing.JCheckBox jCheckBoxMatematicas;
+    public javax.swing.JCheckBox jCheckBoxSociales;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel labelApellido;
     private javax.swing.JLabel labelCedula;
@@ -225,9 +224,9 @@ public class VentanaMatricular extends javax.swing.JFrame {
     private javax.swing.JLabel labelJornada;
     private javax.swing.JLabel labelMatricularMaterias;
     private javax.swing.JLabel labelNombre;
-    private javax.swing.JTextField textFieldApellido;
-    private javax.swing.JTextField textFieldCedula;
-    private javax.swing.JTextField textFieldEdad;
-    private javax.swing.JTextField textFieldName;
+    public javax.swing.JTextField textFieldApellido;
+    public javax.swing.JTextField textFieldCedula;
+    public javax.swing.JTextField textFieldEdad;
+    public javax.swing.JTextField textFieldName;
     // End of variables declaration//GEN-END:variables
 }

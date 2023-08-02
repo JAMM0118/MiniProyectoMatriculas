@@ -1,5 +1,4 @@
-package view.Intefaz;
-/*/*
+package view.Intefaz;/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -9,10 +8,6 @@ package view.Intefaz;
  * @author ALEJANDRO
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
-    VentanaProfesorPlanta menuProfesorPlanta = new VentanaProfesorPlanta(this);
-    VentanaProfesorHoras menuProfesorHoras = new VentanaProfesorHoras(this);
-    VentanaMatricular menuMatricular = new VentanaMatricular(this);
-    
     
     public VentanaPrincipal() {
         initComponents();
@@ -32,6 +27,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnMatricularMaterias = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        btnMatriculados = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,11 +63,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel4.setText("Matricular Materias");
 
+        btnMatriculados.setText("Matriculados");
+        btnMatriculados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMatriculadosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(192, 192, 192)
+                .addComponent(btnMatriculados)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(152, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -80,40 +87,42 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnProfesorPlanta)
+                            .addComponent(btnMatricularMaterias)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addComponent(btnSalir))
-                            .addComponent(btnProfesorHoras)
-                            .addComponent(btnMatricularMaterias))
-                        .addGap(177, 177, 177))))
+                                .addGap(6, 6, 6)
+                                .addComponent(btnProfesorHoras)))
+                        .addGap(177, 177, 177))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnSalir)
+                        .addGap(207, 207, 207))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(9, 9, 9)
+                .addGap(15, 15, 15)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addGap(18, 18, 18)
                 .addComponent(btnProfesorPlanta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnProfesorHoras)
-                .addGap(23, 23, 23)
+                .addGap(18, 18, 18)
                 .addComponent(btnMatricularMaterias)
                 .addGap(18, 18, 18)
+                .addComponent(btnMatriculados)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSalir)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProfesorPlantaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfesorPlantaActionPerformed
-            this.dispose();
-            menuProfesorPlanta.setVisible(true);
+            
     }//GEN-LAST:event_btnProfesorPlantaActionPerformed
 
     private void btnProfesorHorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfesorHorasActionPerformed
-       this.dispose();
-       menuProfesorHoras.setVisible(true);
+   
     }//GEN-LAST:event_btnProfesorHorasActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -121,9 +130,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnMatricularMateriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMatricularMateriasActionPerformed
-       this.dispose();
-       menuMatricular.setVisible(true);
+ 
     }//GEN-LAST:event_btnMatricularMateriasActionPerformed
+
+    public void btnMatriculadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMatriculadosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMatriculadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,10 +173,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMatricularMaterias;
-    private javax.swing.JButton btnProfesorHoras;
-    private javax.swing.JButton btnProfesorPlanta;
-    private javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnMatriculados;
+    public javax.swing.JButton btnMatricularMaterias;
+    public javax.swing.JButton btnProfesorHoras;
+    public javax.swing.JButton btnProfesorPlanta;
+    public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

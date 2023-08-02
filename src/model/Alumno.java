@@ -35,8 +35,6 @@ public class Alumno{
         this.jornadaAsignada = jornadaAsignada;
     }
 
-    
-
     public String getNombre() {
         return nombre;
     }
