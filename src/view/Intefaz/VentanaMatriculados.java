@@ -1,6 +1,4 @@
-package view.Intefaz;
-
-/*
+package view.Intefaz;/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -34,6 +32,7 @@ public class VentanaMatriculados extends javax.swing.JFrame {
         btnVolver = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tableMatriculados = new javax.swing.JTable();
+        btnVerMateriasMatriculadas = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -83,23 +82,34 @@ public class VentanaMatriculados extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tableMatriculados);
 
+        btnVerMateriasMatriculadas.setText("Ver materias matriculadas");
+        btnVerMateriasMatriculadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerMateriasMatriculadasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnVerMateriasMatriculadas)
+                .addGap(48, 48, 48)
                 .addComponent(btnVolver)
-                .addGap(268, 268, 268))
+                .addGap(228, 228, 228))
             .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(btnVolver)
-                .addGap(54, 54, 54))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnVerMateriasMatriculadas)
+                    .addComponent(btnVolver))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         pack();
@@ -108,6 +118,10 @@ public class VentanaMatriculados extends javax.swing.JFrame {
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void btnVerMateriasMatriculadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerMateriasMatriculadasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVerMateriasMatriculadasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,6 +159,7 @@ public class VentanaMatriculados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnVerMateriasMatriculadas;
     public javax.swing.JButton btnVolver;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
